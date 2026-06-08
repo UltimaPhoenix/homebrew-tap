@@ -1,28 +1,28 @@
 class Devcoach < Formula
   desc "Progressive technical coaching MCP server for Claude Code and Claude Desktop"
   homepage "https://github.com/UltimaPhoenix/dev-coach"
-  version "0.3.21"
+  version "0.3.22"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.21/devcoach-darwin-arm64"
-      sha256 "13af36453a3688ac7b8eb881ffae4f15fdda5c952356d6f78fed083b89292124"
+      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.22/devcoach-darwin-arm64"
+      sha256 "e7bbc454d2ea94b3e948f043fa8bd7ff9a2ae9f57f5dc4d9f02fb99ee7cf67c9"
     end
     on_intel do
-      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.21/devcoach-darwin-amd64"
-      sha256 "9b3deff92b05bf7ff6d2d7237aeb97ad685ffc80385296789eb2ad41c1e60153"
+      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.22/devcoach-darwin-amd64"
+      sha256 "a3705cd277352a574b8d579a7a7acc198e4e73e2e15e97a317c338739c620ddd"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.21/devcoach-linux-arm64"
-      sha256 "12aaae2ff1a21f96510b1287f21818aa36d1d35ef0eb19ea89925a7736a25fbe"
+      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.22/devcoach-linux-arm64"
+      sha256 "90315ff92d09477b0de35ac448d526b9c9bc95fcd9887f521f36ec4e02f75669"
     end
     on_intel do
-      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.21/devcoach-linux-amd64"
-      sha256 "b2d51d03ee9032332e4a5040ca92906338db60043963232c710d6aafc596559a"
+      url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.22/devcoach-linux-amd64"
+      sha256 "dea7b97d336aeca0dea12c3aa83d9f84e9c18e72a7e58b4346e94f27beb2b5d0"
     end
   end
 
