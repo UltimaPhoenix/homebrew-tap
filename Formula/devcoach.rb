@@ -6,6 +6,14 @@ class Devcoach < Formula
   version "0.3.44"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.44"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "cfd378a0c13c87dee5f31d5c8bea1a42dcca8bf33e7c2ed9d60410454de96b30"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "f1bda3642cbb463a73a27073e6c3fe0648865616d215af0a4eb9ac75703584df"
+    sha256 cellar: :any_skip_relocation, tahoe: "73cce403a42ab7a92edde870d5da6365ce31b74aa813f582b2a184356d7845d9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "266d5594849f2fa277192f408cc8538ea5241a13975977e4b492a5425591f75a"
+  end
+
   depends_on "python@3.13"
   depends_on "uv"
 
