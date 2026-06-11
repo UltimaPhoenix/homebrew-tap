@@ -3,9 +3,9 @@ class Devcoach < Formula
 
   desc "Progressive technical coaching MCP server for Claude Code and Claude Desktop"
   homepage "https://github.com/UltimaPhoenix/dev-coach"
-  url "https://files.pythonhosted.org/packages/bb/fe/6eb2e1b4d967daf140d012dd5cba9c950d6e1895fc2a0f4bc1f5e9f32a86/devcoach-0.3.32.tar.gz"
-  sha256 "9964a809415d5c89a3b8fe623d963df78cf4f2533b45e82f8ba99402ed34cfc5"
-  version "0.3.32"
+  url "https://files.pythonhosted.org/packages/f3/7a/d9f5b94dab057496119e4fa71a81548262f151f990cbac83b14ce269e5b9/devcoach-0.3.33.tar.gz"
+  sha256 "32b33293e32deeddc38424d10a0182a99735452e7188245cedfd3fc46fb12faf"
+  version "0.3.33"
   license "Apache-2.0"
 
   depends_on "python@3.13"
