@@ -1,20 +1,21 @@
 class Devcoach < Formula
+  include Language::Python::Virtualenv
+
   desc "Progressive technical coaching MCP server for Claude Code and Claude Desktop"
   homepage "https://github.com/UltimaPhoenix/dev-coach"
-  url "https://files.pythonhosted.org/packages/37/7c/2e6c25d4dc9518702c0485ed75b8fbb0bbb306c0a60e81056c3d00aa992b/devcoach-0.3.36.tar.gz"
-  sha256 "c96623dd44fd874b9ece5e77aa71371dde2981c40b1466b46719503b7f341878"
-  version "0.3.36"
+  url "https://files.pythonhosted.org/packages/c5/c9/82f1fe32573ac7139a943052cd43032b104f3465db475a421db1363839df/devcoach-0.3.37.tar.gz"
+  sha256 "4da7fef900d9438d067ce4d00f26484a76f45fc211fc4970a29ef190b3839936"
+  version "0.3.37"
   license "Apache-2.0"
 
   depends_on "python@3.13"
 
   def install
-    python = Formula["python@3.13"].opt_bin/"python3"
-    system python, "-m", "venv", libexec
-    system libexec/"bin/pip", "install",
+    venv = virtualenv_create(libexec, Formula["python@3.13"].opt_bin/"python3")
+    system venv.root/"bin/pip", "install",
            "--no-cache-dir", "--prefer-binary",
            buildpath
-    bin.install_symlink libexec/"bin/devcoach"
+    bin.install_symlink venv.root/"bin/devcoach"
   end
 
   test do
