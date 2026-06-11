@@ -1,103 +1,20 @@
 class Devcoach < Formula
-  include Language::Python::Virtualenv
-
   desc "Progressive technical coaching MCP server for Claude Code and Claude Desktop"
   homepage "https://github.com/UltimaPhoenix/dev-coach"
-  url "https://files.pythonhosted.org/packages/45/6b/f22ac9a4e233050cb9201ebce9259cb9c89217865964ee61f5fe6bc520c3/devcoach-0.3.35.tar.gz"
-  sha256 "1344aabcd3edceb33986af938c00dfbc6b7b019898c7932a4aa2e79ecaf263d2"
-  version "0.3.35"
+  url "https://files.pythonhosted.org/packages/37/7c/2e6c25d4dc9518702c0485ed75b8fbb0bbb306c0a60e81056c3d00aa992b/devcoach-0.3.36.tar.gz"
+  sha256 "c96623dd44fd874b9ece5e77aa71371dde2981c40b1466b46719503b7f341878"
+  version "0.3.36"
   license "Apache-2.0"
 
   depends_on "python@3.13"
 
   def install
-    venv = virtualenv_create(libexec, "python3.13")
-    (buildpath/"requirements.txt").write <<~REQ
-      aiofile==3.9.0
-      annotated-doc==0.0.4
-      annotated-types==0.7.0
-      anyio==4.13.0
-      attrs==26.1.0
-      authlib==1.7.1
-      beartype==0.22.9
-      cachetools==7.0.5
-      caio==0.9.25
-      certifi==2026.2.25
-      cffi==2.0.0
-      click==8.3.2
-      colorama==0.4.6
-      cryptography==46.0.7
-      cyclopts==4.10.2
-      dnspython==2.8.0
-      docstring-parser==0.18.0
-      docutils==0.22.4
-      email-validator==2.3.0
-      exceptiongroup==1.3.1
-      fastapi==0.136.3
-      fastmcp==3.4.2
-      fastmcp-slim==3.4.2
-      griffelib==2.0.2
-      h11==0.16.0
-      httpcore==1.0.9
-      httpx==0.28.1
-      httpx-sse==0.4.3
-      idna==3.15
-      importlib-metadata==8.7.1
-      jaraco-classes==3.4.0
-      jaraco-context==6.1.2
-      jaraco-functools==4.4.0
-      jeepney==0.9.0
-      jinja2==3.1.6
-      joserfc==1.6.4
-      jsonref==1.1.0
-      jsonschema==4.26.0
-      jsonschema-path==0.4.5
-      jsonschema-specifications==2025.9.1
-      keyring==25.7.0
-      markdown-it-py==4.0.0
-      markupsafe==3.0.3
-      mcp==1.27.0
-      mdurl==0.1.2
-      more-itertools==11.0.2
-      openapi-pydantic==0.5.1
-      opentelemetry-api==1.41.0
-      packaging==26.1
-      pathable==0.5.0
-      platformdirs==4.9.6
-      py-key-value-aio==0.4.4
-      pycparser==3.0
-      pydantic==2.13.4
-      pydantic-core==2.46.4
-      pydantic-settings==2.13.1
-      pygments==2.20.0
-      pyjwt==2.12.1
-      pyperclip==1.11.0
-      python-dotenv==1.2.2
-      python-multipart==0.0.27
-      pywin32-ctypes==0.2.3
-      pyyaml==6.0.3
-      referencing==0.37.0
-      rich==15.0.0
-      rich-rst==1.3.2
-      rpds-py==0.30.0
-      secretstorage==3.5.0
-      sse-starlette==3.3.4
-      starlette==1.2.1
-      typing-extensions==4.15.0
-      typing-inspection==0.4.2
-      uncalled-for==0.3.1
-      uvicorn==0.49.0
-      watchfiles==1.1.1
-      websockets==16.0
-      zipp==3.23.1
-    REQ
-    system venv.root/"bin/pip", "install",
+    python = Formula["python@3.13"].opt_bin/"python3"
+    system python, "-m", "venv", libexec
+    system libexec/"bin/pip", "install",
            "--no-cache-dir", "--prefer-binary",
-           "-r", buildpath/"requirements.txt"
-    system venv.root/"bin/pip", "install",
-           "--no-cache-dir", "--no-deps",
            buildpath
-    bin.install_symlink venv.root/"bin/devcoach"
+    bin.install_symlink libexec/"bin/devcoach"
   end
 
   test do
