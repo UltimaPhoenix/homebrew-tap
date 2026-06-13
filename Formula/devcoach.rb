@@ -6,6 +6,13 @@ class Devcoach < Formula
   version "0.3.51"
   license "Apache-2.0"
 
+  bottle do
+    root_url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.51"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "d17abc81fbf8dbe979977d43bc6bb45745b0c925a840210576071205b9b3b0cf"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "631f2058cafdf59567c6ea9a1a00b985f8a14edeb5de4b7810f8b729417aa378"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "01a1703af022af84933dd9878e58c3c41bf3eb559ce002771812d72220c0df55"
+  end
+
   # Intel macOS is unsupported: cryptography >= 49 ships arm64-only macOS
   # wheels, and building it from source needs a Rust toolchain Homebrew's
   # build environment doesn't provide.
