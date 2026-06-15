@@ -1,17 +1,10 @@
 class Devcoach < Formula
   desc "Progressive technical coaching MCP server for Claude Code and Claude Desktop"
   homepage "https://github.com/UltimaPhoenix/dev-coach"
-  url "https://files.pythonhosted.org/packages/41/5d/1caa293de756f734639f6068a600c4d1a902e9462074de26223c100004b1/devcoach-0.3.52.tar.gz"
-  sha256 "dd6d4ce28a7580cbdd00bcf746d8564df73bff99b8559ad0652b82b940a4480e"
-  version "0.3.52"
+  url "https://files.pythonhosted.org/packages/f1/df/0a1d1c4aa8f1b6fb4e7a9b8b4bfc27a77f810e641a20d801dce97fabc281/devcoach-0.3.53.tar.gz"
+  sha256 "450d80fc42e5644863e46a075a963eec836c1d91c5c5ac8aa299e6e51b005d58"
+  version "0.3.53"
   license "Apache-2.0"
-
-  bottle do
-    root_url "https://github.com/UltimaPhoenix/dev-coach/releases/download/v0.3.52"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "d410aa9a6fc0a50929e94b5d3e88f7181d7c5ad9bfff828d41e45b7b8b5c8bf3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "1d74b637fab2247665ed2e7e11f8aad78bb95b14cde6e133651b1ebf7c9af74d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1c902c4e35f3632db2169a44cf33a353acf9db7a164ed0e48b1397a703b0ad85"
-  end
 
   # Intel macOS is unsupported: cryptography >= 49 ships arm64-only macOS
   # wheels, and building it from source needs a Rust toolchain Homebrew's
