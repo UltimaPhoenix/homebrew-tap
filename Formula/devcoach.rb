@@ -1,8 +1,8 @@
 class Devcoach < Formula
   desc "Progressive technical coach (MCP server) for Claude Code and Claude Desktop"
   homepage "https://github.com/UltimaPhoenix/dev-coach"
-  url "https://registry.npmjs.org/devcoach/-/devcoach-0.9.2.tgz"
-  sha256 "e6fb7f54bec1fff415869a35cb8f6cd75cd1f5427e748a64740e369bf19e8e5b"
+  url "https://registry.npmjs.org/devcoach/-/devcoach-0.9.3.tgz"
+  sha256 "bf1eb508964a3cc5f5f2071a19d32d85a75c97b574ed19e5f30f85df2860cd08"
   license "AGPL-3.0-only"
 
   depends_on "node"
